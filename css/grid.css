@@ -1,0 +1,128 @@
+/* Method 1.*/
+/*
+.container {
+  margin: 30px auto;
+
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 200px;
+  grid-template-rows: 100px 200px 400px 100px;
+  gap: 20px;
+
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container div {
+  padding: 12px;
+  background-color: orangered;
+}
+
+.container-1 {
+  grid-column: 1/-1;
+}
+.container-2 {
+}
+.container-3 {
+}
+.container-4 {
+}
+.container-5 {
+  grid-row: 2/4;
+  grid-column: 4/5;
+}
+.container-6 {
+  grid-column: span 3;
+}
+.container-7 {
+  grid-column: 1/-1;
+}
+*/
+
+/* .container {
+  margin: 30px auto;
+
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px [grid-end];
+  grid-template-rows:
+    [header-start] 100px [header-end box-start] 200px
+    [box-end main-start] 400px [main-end footer-start] 100px [footer-end];
+  gap: 20px;
+
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container div {
+  padding: 12px;
+  background-color: orangered;
+}
+
+.container-1 {
+  grid-column: col-start 1 / grid-end;
+}
+.container-2 {
+}
+.container-3 {
+}
+.container-4 {
+}
+.container-5 {
+  grid-row: box-start / main-end;
+  grid-column: 4/5;
+}
+.container-6 {
+  grid-column: span 3;
+}
+.container-7 {
+  grid-column: 1/-1;
+} */
+
+.container {
+  margin: 30px auto;
+
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 200px;
+  grid-template-rows: 100px 200px 400px 100px;
+  grid-template-areas:
+    "head head head head"
+    "box1 box2 box3 side"
+    "main main main side"
+    "foot foot foot foot";
+  gap: 20px;
+
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container div {
+  padding: 12px;
+  background-color: orangered;
+}
+
+.container-1 {
+  grid-area: head;
+}
+.container-2 {
+  grid-area: box1;
+}
+.container-3 {
+  grid-area: box2;
+}
+.container-4 {
+  grid-area: box3;
+}
+.container-5 {
+  grid-area: side;
+}
+.container-6 {
+  grid-area: main;
+}
+.container-7 {
+  grid-area: foot;
+}
